@@ -1,3 +1,5 @@
+import Airtable from './airtable.browser.js';
+
 // 新しいACCESSトークン
 const apiKey = 'patwjHZtEqvMsKIa5'; 
 const baseId = 'appwZI1fI2TvlsnFA';
