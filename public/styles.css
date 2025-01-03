@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+button {
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    position: relative; /* ソートボタンの位置調整用 */
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* ソートコントロール全体のスタイル設定 */
+.sort-controls {
+    position: absolute; /* 親要素に対して絶対配置 */
+    right: 4px; /* ▲と▼を右端に寄せる位置を調整 */
+    top: 50%; /* 縦方向の中央に配置 */
+    transform: translateY(-50%); /* 中央揃えを実現するための調整 */
+    display: flex; /* フレックスボックスで配置 */
+    /*flex-direction: column; /* ▲と▼を上下に並べる */
+    gap: 1px; /* ▲と▼の間隔を調整 */
+}
+
+/* ソートボタン（▲と▼）のスタイル設定 */
+.sort-controls button {
+    font-size: 20px; /* ボタン内の文字サイズ */
+    /*width: 20px; /* ボタンの幅 */
+    /*height: 20px; /* ボタンの高さ */
+    background-color: transparent; /* 背景色を透明に設定 */
+    color: #007bff; /* テキストの色 */
+    border: none; /* ボタンの枠線を削除 */
+    border-radius: 4px; /* ボタンの角を少し丸くする */
+    cursor: pointer; /* カーソルをクリック可能な形状に変更 */
+    text-align: center; /* テキストを水平中央に配置 */
+    line-height: 20px; /* 縦方向でテキストを中央揃え */
+    padding: 0; /* 余白を削除 */
+}
+
+/* カラムヘッダー内でソートコントロールが配置される際の調整 */
+th {
+    position: relative; /* ソートコントロールを正しく配置するために相対配置 */
+    padding-right: 25px; /* ▲と▼がテキストに重ならないよう右側に余白を追加 */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    margin-bottom: 10px;
+}
+
+#modal-close {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#modal-close:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラオケ帳</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>カラオケ帳</h1>
+    <button id="reset-button">元に戻す</button>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>曲名 <span class="sort-controls"><button class="sort-btn" data-column="曲名" data-order="asc">▲</button><button class="sort-btn" data-column="曲名" data-order="desc">▼</button></span></th>
+                <th>歌手 <span class="sort-controls"><button class="sort-btn" data-column="歌手" data-order="asc">▲</button><button class="sort-btn" data-column="歌手" data-order="desc">▼</button></span></th>
+                <th>作詞 <span class="sort-controls"><button class="sort-btn" data-column="作詞" data-order="asc">▲</button><button class="sort-btn" data-column="作詞" data-order="desc">▼</button></span></th>
+                <th>作曲 <span class="sort-controls"><button class="sort-btn" data-column="作曲" data-order="asc">▲</button><button class="sort-btn" data-column="作曲" data-order="desc">▼</button></span></th>
+                <th>日付 <span class="sort-controls"><button class="sort-btn" data-column="日付" data-order="asc">▲</button><button class="sort-btn" data-column="日付" data-order="desc">▼</button></span></th>
+                <th>タグ</th>
+                <th>分類</th>
+            </tr>
+        </thead>
+        <tbody id="karaoke-table-body"></tbody>
+    </table>
+
+    <!-- モーダルウィンドウ -->
+    <div id="modal" class="modal">
+        <div class="modal-content" id="modal-content"></div>
+        <button id="modal-close">閉じる</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
