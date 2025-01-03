@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .song-card {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .song-title {
+    font-size: 16px;
+  }
+  .links a {
+    font-size: 12px;
+  }
+}
